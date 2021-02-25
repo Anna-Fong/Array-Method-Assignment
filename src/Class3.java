@@ -1,5 +1,6 @@
 public class Class3 {
 
+// on projector in class
 
     public static double squareRoot(double number) {
         double guess = 0;
@@ -19,7 +20,7 @@ public class Class3 {
         numbers[0] = 5;
         numbers[1] = 6;
 
-        System.out.println(squareRoot(25.0));
+        System.out.println(squareRoot(81.0));
 
     }
 }

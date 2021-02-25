@@ -1,5 +1,6 @@
 public class Class2 {
     /*
+    on projector
     square root of any positive number
      */
 
@@ -14,7 +15,6 @@ public class Class2 {
         }
         System.out.println("Count: " + count);
         return guess;
-
     }
 
     public static void main(String[] args) {
