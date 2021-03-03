@@ -36,7 +36,7 @@ public class Main {
         int newArrayLength = length;
         int base = 0;
         int a = length;
-
+        System.out.println("------------");
         for (int i = 0; i < length; i++) {
             int value = (base += 10);
             if (i == length) {
