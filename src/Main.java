@@ -1,7 +1,6 @@
 
 public class Main {
 
-
         //loop through array
         //loop old array to new array
         //add on the number to last position

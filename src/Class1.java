@@ -1,6 +1,6 @@
 public class Class1 {
     /*
-    on projector
+
     parameter has to be a positive integer perfect square
     if the method does not find a square root return -1
      */

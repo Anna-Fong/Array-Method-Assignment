@@ -1,6 +1,6 @@
 public class Class2 {
     /*
-    on projector
+
     square root of any positive number
      */
 

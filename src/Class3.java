@@ -1,6 +1,6 @@
 public class Class3 {
 
-// on projector in class
+
 
     public static double squareRoot(double number) {
         double guess = 0;
