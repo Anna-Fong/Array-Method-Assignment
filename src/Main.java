@@ -1,56 +1,59 @@
-
 public class Main {
 
-        //loop through array
-        //loop old array to new array
-        //add on the number to last position
-        //return new array
-
-        //	• Add values to the end of an array.
-        //	• Delete values from the end of an array (often referred to as pop).
-        //	This method should also return the 'popped' value. Array size should shrink by one.
-        //Insert values into an array at chosen index position.
-        // (Increases the size of the array by 1 Ex. array 2, 3, 5.  Insert 4 into position 2 gives 2,3,4,5)
-
-    public static int oldArray(int length) {
-
-        int oldArrayLength = length;
-        int base = 0;
-        int a = length;
-
-        System.out.println("Index: \tValue:");
-
-        for (int i = 0; i < length; i++) {
-            int value = (base += 2);
-            if (i == length) {
-                break;
-            }
-
-            System.out.println(i + "\t\t" + value);
-        }
-        return a;
-    }
-
-    public static int newArray(int length) {
-
-        int newArrayLength = length;
-        int base = 0;
-        int a = length;
-        System.out.println("------------");
-        for (int i = 0; i < length; i++) {
-            int value = (base += 10);
-            if (i == length) {
-                break;
-            }
-
-            System.out.println(i + "\t\t" + value);
-        }
-        return a;
-    }
-
     public static void main(String[] args) {
-        System.out.println(oldArray(5));
-        System.out.println(newArray(2));
+        int arr[] = new int[5];
+        arr = addValue(arr, 1);
+        arr = deleteValue(arr);
+        arr = insertValue(arr, 2, 10);
+        for (int i = 0; i < arr.length; i++);
     }
 
-}
+//add value
+    private static int[] addValue(int arr[], int value) {
+        int newarr[] = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
+            newarr[i] = arr[i];
+            newarr[newarr.length - 1] = value;
+        }
+        System.out.println("Array after adding a value:");
+        for (int i = 0; i < newarr.length; i++) {
+            System.out.println(newarr[i]);
+        }
+        return newarr;
+    }
+
+//delete value
+    private static int[] deleteValue(int arr[]) {
+        int newarr[] = new int[arr.length];
+        for(int i = 0 + 1; i < newarr.length - 1; i++) {
+            newarr[i] = arr[i];
+        }
+        System.out.println("Array after deleting a value:");
+        for(int i = 0; i + 1 < newarr.length - 1; i++) {
+            System.out.println(newarr[i]);
+        }
+        return newarr;
+    }
+
+//insert value
+    private static int[] insertValue(int arr[], int indexposition, int value) {
+        int newarr[] = new int[arr.length];
+        if (indexposition > arr.length) {
+            System.out.println("Array after inserting value:\nError - Index position is larger than array");
+        } else {
+            for (int i = 0; i < newarr.length; i++) {
+                if (i < indexposition)
+                    newarr[i] = arr[i];
+                else if (i == indexposition)
+                    newarr[i] = value;
+                else
+                    newarr[i] = arr[i - 1];
+            }
+            System.out.println("Array after inserting value:");
+            for (int i = 0; i < newarr.length; i++) {
+                System.out.println(newarr[i]);
+            }
+        }
+        return newarr;
+    }
+ }
